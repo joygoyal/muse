@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Puzzle{% endblock %}
+
+{% block content %}
+<section class="section-heading reveal-up">
+  <p class="eyebrow">Mini games</p>
+  <h1>Four tiny locks before the hidden memory.</h1>
+  <p class="subtitle">Correct answers unlock the next card. Incorrect ones shake, because drama is allowed here.</p>
+</section>
+
+<section class="puzzle-stack" data-puzzle-stack>
+  {% for puzzle in puzzles %}
+  <article class="puzzle-card glass-panel reveal-up {% if not loop.first %}is-locked{% endif %}" data-puzzle-card data-puzzle-id="{{ puzzle.id }}">
+    <div class="lock-badge"><i class="fa-solid fa-lock"></i></div>
+    <p class="eyebrow">Lock {{ loop.index }}</p>
+    <h2>{{ puzzle.question }}</h2>
+    <form data-puzzle-form>
+      <input type="text" name="answer" placeholder="{{ puzzle.placeholder }}" autocomplete="off" {% if not loop.first %}disabled{% endif %}>
+      <button class="primary-button compact" type="submit" {% if not loop.first %}disabled{% endif %}>
+        <i class="fa-solid fa-key"></i>
+        <span>Try</span>
+      </button>
+    </form>
+    <p class="puzzle-feedback" data-feedback>{{ puzzle.hint }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<div class="unlock-panel glass-panel" data-unlock-panel hidden>
+  <h2>All locks opened.</h2>
+  <p>The hidden memory mode is waiting.</p>
+  <a class="primary-button" href="{{ url_for('main.reveal') }}" data-transition-link>
+    <span>Reveal Memories</span>
+    <i class="fa-solid fa-sparkles"></i>
+  </a>
+</div>
+{% endblock %}

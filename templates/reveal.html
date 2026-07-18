@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}{% if locked %}Muse - Secret{% else %}Muse - Special Moments{% endif %}{% endblock %}
+
+{% block content %}
+{% if locked %}
+<section class="center-stage">
+  <article class="glass-panel secret-panel reveal-up">
+    {% if unlocked %}
+      <lottie-player src="{{ url_for('static', filename='animations/heart.json') }}" background="transparent" speed="1" loop autoplay></lottie-player>
+      <p class="eyebrow">Unlocked</p>
+      <h1>The handwritten note</h1>
+      <p class="handwritten">{{ settings.secret_note }}</p>
+      <a class="primary-button" href="{{ url_for('main.ending') }}" data-transition-link>
+        <span>Go to the Ending</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    {% else %}
+      <div class="lock-symbol"><i class="fa-solid fa-lock"></i></div>
+      <p class="eyebrow">Secret message</p>
+      <h1>This page is locked.</h1>
+      <form class="secret-form" method="post">
+        <input type="password" name="secret_code" placeholder="Enter secret code" autocomplete="off" required>
+        <button class="primary-button" type="submit">
+          <i class="fa-solid fa-unlock-keyhole"></i>
+          <span>Unlock</span>
+        </button>
+      </form>
+      <p class="secret-hint"><i class="fa-solid fa-lightbulb"></i> Hint: you call me that sometimes.</p>
+      {% if error %}<p class="form-error">{{ error }}</p>{% endif %}
+    {% endif %}
+  </article>
+</section>
+{% else %}
+<section class="section-heading reveal-up">
+  <p class="eyebrow">Hidden memory mode</p>
+  <h1>Little moments, saved like favorite tracks.</h1>
+  <p class="subtitle">Open the hidden buttons, then follow the timeline to the secret message.</p>
+</section>
+
+<section class="memory-grid">
+  {% for memory in memories %}
+  <button class="memory-tile reveal-up" data-memory-title="{{ memory.title }}" data-memory-body="{{ memory.body }}" data-memory-image="{{ url_for('static', filename='images/' ~ memory.thumbnail) }}">
+    <img src="{{ url_for('static', filename='images/' ~ memory.thumbnail) }}" alt="{{ memory.title }}" loading="lazy">
+    <span>{{ memory.title }}</span>
+  </button>
+  {% endfor %}
+</section>
+
+<section class="timeline">
+  {% for item in timeline %}
+  <article class="timeline-item reveal-up">
+    <div class="timeline-dot"></div>
+    <img src="{{ url_for('static', filename='images/' ~ item.photo) }}" alt="{{ item.date }}" loading="lazy">
+    <div>
+      <p class="eyebrow">{{ item.date }}</p>
+      <h2>{{ item.memory }}</h2>
+      <p><i class="fa-solid fa-music"></i> {{ item.song }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<div class="next-strip reveal-up">
+  <a class="secondary-button" href="{{ url_for('main.secret') }}" data-transition-link>
+    <span>Open the secret page</span>
+    <i class="fa-solid fa-lock"></i>
+  </a>
+</div>
+{% endif %}
+{% endblock %}

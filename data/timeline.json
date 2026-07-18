@@ -1,0 +1,23 @@
+[
+  {
+    "date": "The first hello",
+    "memory": "A normal moment that quietly became the beginning.",
+    "photo": "memory-first.svg",
+    "song": "Golden Hour",
+    "animation": "spark"
+  },
+  {
+    "date": "The late-night talk",
+    "memory": "The hour got small, but somehow the world felt bigger.",
+    "photo": "memory-night.svg",
+    "song": "Until I Found You",
+    "animation": "pulse"
+  },
+  {
+    "date": "The almost-confession",
+    "memory": "A message typed, deleted, typed again, and still somehow heard.",
+    "photo": "memory-note.svg",
+    "song": "Mrignaini",
+    "animation": "float"
+  }
+]

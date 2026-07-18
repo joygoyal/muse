@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Purple album art">
+  <defs>
+    <radialGradient id="purple" cx="66%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#ff79c6"/>
+      <stop offset="46%" stop-color="#8e5cff"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="56" fill="url(#purple)"/>
+  <path d="M126 342c92-124 228-158 348-82" fill="none" stroke="#f6c453" stroke-width="20" stroke-linecap="round" opacity=".82"/>
+  <path d="M142 392c98-86 222-98 316-26" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity=".36"/>
+  <circle cx="300" cy="300" r="86" fill="#05050a" opacity=".72"/>
+  <circle cx="300" cy="300" r="22" fill="#b88cff"/>
+</svg>

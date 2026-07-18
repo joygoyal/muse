@@ -1,0 +1,15 @@
+{
+  "site_name": "Muse",
+  "secret_codes": ["master sahab", "Master sahab"],
+  "secret_note": "I tried to make this feel like a playlist, but it became a small universe instead. Some people become playlists. You became my favorite one.",
+  "final_song_title": "her",
+  "final_song_artist": "JVKE",
+  "final_song_embed": "https://open.spotify.com/embed/track/6G9YlbU3ByPJQvOFDRdwyM?utm_source=generator",
+  "theme": {
+    "black": "#05050a",
+    "navy": "#081526",
+    "purple": "#8e5cff",
+    "pink": "#ff4fa3",
+    "gold": "#f6c453"
+  }
+}

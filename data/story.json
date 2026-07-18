@@ -1,0 +1,29 @@
+[
+  {
+    "chapter": "Chapter 1",
+    "song": "Golden Hour",
+    "artist": "JVKE",
+    "message": "This reminds me of how conversations with you feel.",
+    "explanation": "Soft, bright, and suddenly impossible to ignore.",
+    "background": "aurora",
+    "accent": "#f6c453"
+  },
+  {
+    "chapter": "Chapter 2",
+    "song": "Until I Found You",
+    "artist": "Stephen Sanchez",
+    "message": "Some people become memories. Some become comfort.",
+    "explanation": "This one feels like finding a quiet place inside a loud world.",
+    "background": "rose",
+    "accent": "#ff79c6"
+  },
+  {
+    "chapter": "Chapter 3",
+    "song": "Mrignaini",
+    "artist": "Karun",
+    "message": "Some songs feel like they were meant to be kept close.",
+    "explanation": "This brings the story into a softer, more personal corner.",
+    "background": "midnight",
+    "accent": "#b88cff"
+  }
+]

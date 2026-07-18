@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Before We Begin{% endblock %}
+
+{% block content %}
+<section class="center-stage">
+  <div class="glass-panel intro-panel reveal-up">
+    <lottie-player src="{{ url_for('static', filename='animations/headphones.json') }}" background="transparent" speed="1" loop autoplay></lottie-player>
+    <p class="eyebrow">Before we begin...</p>
+    <h1>Wear your earphones.</h1>
+    <p class="subtitle">Some stories sound softer when they are just for you.</p>
+    <a class="primary-button" href="{{ url_for('main.story') }}" data-transition-link>
+      <i class="fa-solid fa-headphones"></i>
+      <span>I'm Ready</span>
+    </a>
+  </div>
+</section>
+{% endblock %}

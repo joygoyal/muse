@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Golden album art">
+  <defs>
+    <radialGradient id="sun" cx="36%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#fff5ba"/>
+      <stop offset="42%" stop-color="#f6c453"/>
+      <stop offset="100%" stop-color="#6f3b7f"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="56" fill="#090915"/>
+  <circle cx="300" cy="300" r="250" fill="url(#sun)" opacity=".95"/>
+  <circle cx="300" cy="300" r="116" fill="#05050a" opacity=".82"/>
+  <circle cx="300" cy="300" r="24" fill="#f6c453"/>
+  <path d="M128 416c94-74 230-74 344 0" fill="none" stroke="#fff4d0" stroke-width="18" stroke-linecap="round" opacity=".7"/>
+</svg>

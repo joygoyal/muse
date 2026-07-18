@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Playlist{% endblock %}
+
+{% block content %}
+<section class="section-heading reveal-up">
+  <p class="eyebrow">Playlist mode</p>
+  <h1>Songs that kept trying to say it first.</h1>
+  <p class="subtitle">Tap a preview for the Spotify embed, or reveal the reason each song made the list.</p>
+</section>
+
+<section class="playlist-grid">
+  {% for song in songs %}
+  <article class="song-card reveal-up" style="--song-color: {{ song.color }}">
+    <img src="{{ url_for('static', filename='images/' ~ song.album_image) }}" alt="{{ song.title }} album art" loading="lazy">
+    <div class="song-meta">
+      <p class="mood">{{ song.mood }}</p>
+      <h2>{{ song.title }}</h2>
+      <p>{{ song.artist }}</p>
+    </div>
+    <div class="card-actions">
+      <button
+        class="icon-text-button"
+        data-spotify="{{ song.spotify_embed }}"
+        data-title="{{ song.title }}"
+        data-audio="{{ url_for('static', filename='music/' ~ song.audio_file) }}"
+        data-audio-file="{{ song.audio_file }}"
+        data-loop-start="{{ song.loop_start }}"
+        data-loop-end="{{ song.loop_end }}"
+        data-lyrics='{{ song.lyrics | tojson }}'
+      >
+        <i class="fa-brands fa-spotify"></i>
+        <span>Play Preview</span>
+      </button>
+      <button class="icon-button" data-song-reason="{{ song.why }}" data-title="Why {{ song.title }}?" aria-label="Why this song?" title="Why this song?">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<div class="next-strip reveal-up">
+  <a class="secondary-button" href="{{ url_for('main.puzzle') }}" data-transition-link>
+    <span>Unlock the puzzles</span>
+    <i class="fa-solid fa-lock-open"></i>
+  </a>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "photo",
+    "title": "Hidden Photo",
+    "type": "photo",
+    "thumbnail": "memory-first.svg",
+    "body": "A placeholder for a favorite photo. Replace the SVG in static/images with your own image when you are ready."
+  },
+  {
+    "id": "note",
+    "title": "Tiny Note",
+    "type": "note",
+    "thumbnail": "memory-note.svg",
+    "body": "I saved this little corner for the things that feel too soft to say loudly."
+  },
+  {
+    "id": "quote",
+    "title": "Quiet Quote",
+    "type": "quote",
+    "thumbnail": "memory-night.svg",
+    "body": "Some people do not enter your life loudly. They just make everything less heavy."
+  }
+]

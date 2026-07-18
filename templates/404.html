@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Page Not Found{% endblock %}
+
+{% block content %}
+<section class="center-stage">
+  <article class="glass-panel not-found reveal-up">
+    <p class="eyebrow">404</p>
+    <h1>This note drifted off-key.</h1>
+    <p class="subtitle">The page you wanted is not in this playlist.</p>
+    <a class="primary-button" href="{{ url_for('main.index') }}" data-transition-link>
+      <i class="fa-solid fa-house"></i>
+      <span>Back Home</span>
+    </a>
+  </article>
+</section>
+{% endblock %}

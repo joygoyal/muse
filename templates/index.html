@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Start Journey{% endblock %}
+{% block body_class %}landing-page{% endblock %}
+
+{% block content %}
+<section class="hero fullscreen">
+  <div class="hero-aura"></div>
+  <div class="hero-content reveal-up">
+    <p class="eyebrow">A story through music</p>
+    <h1>This isn't just a playlist...</h1>
+    <p class="subtitle">It's something I couldn't say directly.</p>
+    <a class="primary-button" href="{{ url_for('main.intro') }}" data-transition-link data-play-intro>
+      <i class="fa-solid fa-play"></i>
+      <span>Start Journey</span>
+    </a>
+  </div>
+  <div class="hero-vinyl" aria-hidden="true">
+    <div class="vinyl-disc"></div>
+    <div class="vinyl-glow"></div>
+  </div>
+</section>
+{% endblock %}

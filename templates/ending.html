@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Ending{% endblock %}
+{% block body_class %}ending-page{% endblock %}
+
+{% block content %}
+<section class="ending-stage">
+  <div class="stars" aria-hidden="true"></div>
+  <article class="ending-card reveal-up">
+    <div class="record-wrap">
+      <div class="vinyl-disc large"></div>
+      <lottie-player src="{{ url_for('static', filename='animations/heart.json') }}" background="transparent" speed=".8" loop autoplay></lottie-player>
+    </div>
+    <p class="eyebrow">The last page</p>
+    <h1 data-typing="Some people become playlists. You became my favorite one."></h1>
+    <button class="primary-button" data-final-song="{{ settings.final_song_embed }}" data-final-title="{{ settings.final_song_title }} by {{ settings.final_song_artist }}">
+      <i class="fa-solid fa-heart"></i>
+      <span>One Last Song</span>
+    </button>
+    <div class="final-player" data-final-player></div>
+  </article>
+</section>
+{% endblock %}

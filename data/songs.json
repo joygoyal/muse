@@ -1,0 +1,78 @@
+[
+  {
+    "id": "golden-hour",
+    "title": "Golden Hour",
+    "artist": "JVKE",
+    "mood": "Warm / glowing",
+    "why": "It sounds like sunlight finding the room right when the conversation gets honest.",
+    "album_image": "album-golden.svg",
+    "spotify_embed": "https://open.spotify.com/embed/track/5odlY52u43F5BjByhxg7wg?utm_source=generator",
+    "audio_file": "golden-hour.mp3",
+    "loop_start": 25,
+    "loop_end": 55,
+    "lyrics": [
+      { "time": 0, "text": "Soft light, warm silence." },
+      { "time": 6, "text": "Every word feels golden." },
+      { "time": 12, "text": "This moment keeps glowing." },
+      { "time": 20, "text": "I wish it could stay." }
+    ],
+    "color": "#f6c453"
+  },
+  {
+    "id": "until-i-found-you",
+    "title": "Until I Found You",
+    "artist": "Stephen Sanchez",
+    "mood": "Vintage / safe",
+    "why": "It carries that old-movie feeling, like a moment you want to replay just once more.",
+    "album_image": "album-rose.svg",
+    "spotify_embed": "https://open.spotify.com/embed/track/0T5iIrXA4p5GsubkhuBIKV?utm_source=generator",
+    "audio_file": "until-i-found-you.mp3",
+    "loop_start": 18,
+    "loop_end": 48,
+    "lyrics": [
+      { "time": 0, "text": "Old-song kind of comfort." },
+      { "time": 7, "text": "Somehow, you felt familiar." },
+      { "time": 14, "text": "The world went quieter." },
+      { "time": 22, "text": "And I found a home." }
+    ],
+    "color": "#ff79c6"
+  },
+  {
+    "id": "perfect",
+    "title": "Mrignaini",
+    "artist": "Karun",
+    "mood": "Hindi indie / dreamy",
+    "why": "It brings a softer Hindi indie feeling into the journey, like the story suddenly got more personal.",
+    "album_image": "album-purple.svg",
+    "spotify_embed": "https://open.spotify.com/embed/track/1nZ2O25UgnTFcPz3QrEDwX?utm_source=generator",
+    "audio_file": "mrignaini-karun.mp3",
+    "loop_start": 20,
+    "loop_end": 50,
+    "lyrics": [
+      { "time": 0, "text": "A softer rhythm enters." },
+      { "time": 8, "text": "The night feels handwritten." },
+      { "time": 16, "text": "Some feelings sound better in Hindi." },
+      { "time": 24, "text": "This one stays close." }
+    ],
+    "color": "#b88cff"
+  },
+  {
+    "id": "one-last-song",
+    "title": "her",
+    "artist": "JVKE",
+    "mood": "Starlit / final",
+    "why": "This is the final song because it feels like the whole journey finally saying her name.",
+    "album_image": "album-starry.svg",
+    "spotify_embed": "https://open.spotify.com/embed/track/6G9YlbU3ByPJQvOFDRdwyM?utm_source=generator",
+    "audio_file": "her-jvke.mp3",
+    "loop_start": 30,
+    "loop_end": 60,
+    "lyrics": [
+      { "time": 0, "text": "The final song starts softly." },
+      { "time": 7, "text": "Everything points back to her." },
+      { "time": 15, "text": "A name becomes a feeling." },
+      { "time": 23, "text": "And the story keeps repeating." }
+    ],
+    "color": "#8de3ff"
+  }
+]

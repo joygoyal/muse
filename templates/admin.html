@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - Admin{% endblock %}
+
+{% block content %}
+<section class="admin-shell">
+  {% if not logged_in %}
+  <article class="glass-panel admin-login reveal-up">
+    <p class="eyebrow">Hidden admin</p>
+    <h1>Content editor</h1>
+    <p class="subtitle">Enter the admin password to edit songs, story chapters, puzzles, memories, and settings.</p>
+    <form method="post" class="admin-form">
+      <input type="password" name="password" placeholder="Admin password" required>
+      <button class="primary-button" type="submit">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Enter</span>
+      </button>
+    </form>
+    {% if error %}<p class="form-error">{{ error }}</p>{% endif %}
+  </article>
+  {% else %}
+  <div class="admin-editor reveal-up">
+    <aside class="admin-tabs glass-panel">
+      <h1>Admin</h1>
+      {% for file in files %}
+      <a class="{% if file == selected %}active{% endif %}" href="{{ url_for('admin.dashboard', file=file) }}">{{ file }}</a>
+      {% endfor %}
+      <a href="{{ url_for('admin.logout') }}">Logout</a>
+    </aside>
+    <section class="glass-panel editor-panel">
+      <p class="eyebrow">Editing {{ selected }}.json</p>
+      <form method="post" action="{{ url_for('admin.save', name=selected) }}">
+        <textarea name="content" spellcheck="false">{{ content }}</textarea>
+        <button class="primary-button" type="submit">
+          <i class="fa-solid fa-floppy-disk"></i>
+          <span>Save JSON</span>
+        </button>
+      </form>
+      {% if request.args.get("saved") %}<p class="form-success">Saved successfully.</p>{% endif %}
+      {% if error %}<p class="form-error">{{ error }}</p>{% endif %}
+    </section>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

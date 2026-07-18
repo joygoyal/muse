@@ -1,0 +1,26 @@
+[
+  {
+    "id": "favorite-food",
+    "question": "Guess my favorite food",
+    "placeholder": "Type the dish",
+    "answers": ["pizza"],
+    "hint": "Think comfort food, not fine dining.",
+    "success": "Correct. You know the snack-level truth. 😜"
+  },
+  {
+    "id": "song-reminder",
+    "question": "Which song reminds me of you?",
+    "placeholder": "Type the song name",
+    "answers": ["baawli"],
+    "hint": "It is one word, and it sounds a little beautifully unhinged.",
+    "success": "Yes. Baawli is the one."
+  },
+  {
+    "id": "favorite-emoji",
+    "question": "Guess which emoji I use the most",
+    "placeholder": "Type the emoji or word",
+    "answers": ["heart", "red heart", "love", "❤️"],
+    "hint": "It is not subtle. It is also not pretending to be.",
+    "success": "Yes. That little symbol was doing overtime."
+  }
+]

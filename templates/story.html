@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Muse - {{ chapter.chapter }}{% endblock %}
+{% block body_class %}story-bg-{{ chapter.background }}{% endblock %}
+
+{% block content %}
+<section class="story-stage">
+  <article class="story-card glass-panel reveal-up" style="--chapter-accent: {{ chapter.accent }}">
+    <div class="story-progress">
+      <span>{{ chapter.chapter }}</span>
+      <span>{{ chapter_number }} / {{ chapter_count }}</span>
+    </div>
+    <div class="song-orbit" aria-hidden="true">
+      <i class="fa-solid fa-music"></i>
+    </div>
+    <h1>{{ chapter.song }}</h1>
+    <p class="artist">{{ chapter.artist }}</p>
+    <p class="story-message">{{ chapter.message }}</p>
+    <p class="story-explanation">{{ chapter.explanation }}</p>
+    {% if song %}
+    <div class="chapter-player" data-story-player>
+      <div class="local-preview" aria-label="Chapter music player">
+        <span class="preview-status" data-player-status><i class="fa-solid fa-volume-low"></i> Ready to play chapter music</span>
+        <span class="mini-visualizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="lyric-window compact-lyrics">
+        <p class="eyebrow">Now playing</p>
+        <p data-current-lyric>{{ song.lyrics[0].text if song.lyrics else chapter.message }}</p>
+      </div>
+      <div class="audio-controls">
+        <button
+          class="primary-button compact"
+          type="button"
+          data-story-music
+          data-story-autoplay="true"
+          data-exact-only="true"
+          data-title="{{ song.title }}"
+          data-audio="{{ url_for('static', filename='music/' ~ song.audio_file) }}"
+          data-audio-file="{{ song.audio_file }}"
+          data-loop-start="{{ song.loop_start }}"
+          data-loop-end="{{ song.loop_end }}"
+          data-lyrics='{{ song.lyrics | tojson }}'
+        >
+          <i class="fa-solid fa-play"></i>
+          <span>Play Chapter Music</span>
+        </button>
+        <button class="secondary-button compact" type="button" data-stop-preview>
+          <i class="fa-solid fa-stop"></i>
+          <span>Stop</span>
+        </button>
+      </div>
+    </div>
+    {% endif %}
+    <div class="story-actions">
+      <a class="primary-button" href="{{ next_url }}" data-transition-link>
+        <span>{% if chapter_number < chapter_count %}Next Chapter{% else %}Open Playlist{% endif %}</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </article>
+</section>
+{% endblock %}
