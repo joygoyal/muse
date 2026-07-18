@@ -21,3 +21,12 @@ Thumbs.db
 
 # Python env
 .env
+
+work/
+__pycache__/
+.venv/
+venv/
+env/
+.vscode/
+.cache/
+.codex/
